@@ -1,0 +1,9 @@
+project: savantenvs/gdk-pixbuf
+target: stream_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/stream_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/stream_fuzzer
+    libfuzzer: true
+    timeout: 30
