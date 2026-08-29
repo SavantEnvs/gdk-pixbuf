@@ -1,0 +1,9 @@
+project: savantenvs/gdk-pixbuf
+target: pixbuf_cons_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pixbuf_cons_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/pixbuf_cons_fuzzer
+    libfuzzer: true
+    timeout: 30
