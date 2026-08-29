@@ -1,0 +1,9 @@
+project: savantenvs/gdk-pixbuf
+target: animation_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/animation_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/animation_fuzzer
+    libfuzzer: true
+    timeout: 30
